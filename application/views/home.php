@@ -61,7 +61,7 @@
 						<li><a href="<?= base_url('tourist/spots') ?>" class="nav-link">Spots</a></li>
 						<li><a href="<?= base_url('tourist/aboutus') ?>" class="nav-link">About Us</a></li>
 						<li><a href="<?= base_url('tourist/contactus') ?>" class="nav-link">Contact Us</a></li>
-						<li><a href="<?= base_url ('login/input') ?>" class="nav-link">Login</a></li>    
+						<li><a href="<?= base_url ('login/input') ?>" class="nav-link">Login</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <?php if (count($session) > 0) { ?>
@@ -102,6 +102,13 @@
 					<h2>Welcome to Bohol!</h2>
 					<p>At the heart of the Philippines archipelago lies our most enchanting and beautiful island province, where indeed, more fun and excitement awaits every visitor.</p>
 				</li>
+                <li>
+                    <h2>Search Tourist Spots</h2>
+                    <form action="<?= base_url('tourist/search') ?>" method="get">
+                        <input type="text" class="form-control" name="name" placeholder="Type name of tourist spot here..."/>
+                        <input type="submit" class="hidden"/>
+                    </form>
+                </li>
 				<li>
 					<h2>Tourist Spot Types</h2>
 					<ul>

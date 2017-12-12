@@ -22,9 +22,16 @@
             return $this->db->get_where('tourist_spots', ['id'=>$id])->result_array();
         }
 
-        public function retrieve_by_name($wildcard) {
-            $this->db->like('name', $wildcard);
-            return $this->db->get('tourist_spots')->result_array();
+        public function retrieve_by_name($wildcard, $type='all') {
+            if ($wildcard != 'all') {
+                $this->db->like('name', $wildcard);
+            }
+
+            if ($type != 'all') {
+                return $this->db->get_where('tourist_spots', ['spot_type'=>$type])->result_array();
+            } else {
+                return $this->db->get('tourist_spots')->result_array();
+            }
         }
 
         public function update($id, $data) {

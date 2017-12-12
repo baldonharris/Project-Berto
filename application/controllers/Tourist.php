@@ -43,8 +43,8 @@
             echo json_encode($data);
         }
 
-        public function retrieve_by_name($wildcard) {
-            $data = $this->modifyData($this->m_tspots->retrieve_by_name($wildcard));
+        public function retrieve_by_name($wildcard='', $type='all') {
+            $data = $this->modifyData($this->m_tspots->retrieve_by_name($wildcard, $type));
 
             echo json_encode($data);
         }
@@ -120,6 +120,10 @@
 		public function spots() {
 			$this->load->view('spots');
 		}
+
+		public function search() {
+            $this->load->view('search');
+        }
 		
 		public function page($name) {
 			$this->load->view($name);

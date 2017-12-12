@@ -24,8 +24,10 @@ $(document).ready(function () {
         e.preventDefault();
         loading('show');
 
-        var url = $(this).closest('.list-group').data('retrieve') + '/' + $(this).data('type');
+        var name = $(this).closest('.list-group').data('name');
+        var url = $(this).closest('.list-group').data('retrieve') + '/' + (_.isEmpty(name) ? 'all' : name) + '/' + $(this).data('type');
 
+        $('#searchIn').text($(this).data('type'));
         $('.list-group-item').removeClass('active');
         $(this).addClass('active');
 

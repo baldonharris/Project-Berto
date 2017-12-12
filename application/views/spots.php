@@ -139,7 +139,6 @@
 				background: #FFFFFF;
 			}
         </style>
-        </style>
     </head>
     <body>
 	<div id="wrapper">
@@ -209,22 +208,22 @@
             </div>
 		</div>
 	</div>
-        <script src="<?= base_url('assets/js/plugins/jquery.min.js') ?>"></script>
-		<script src="<?= base_url('assets/js/plugins/bootstrap.min.js') ?>"></script>	
-		<script src="<?= base_url('assets/js/plugins/underscore-min.js') ?>"></script>
-		<script src="<?= base_url('assets/js/plugins/loadingoverlay.min.js') ?>"></script>
-		<script src="<?= base_url('assets/js/plugins/loadingoverlay_progress.min.js') ?>"></script>
-		<script src="<?= base_url('assets/js/plugins/jquery.form.min.js') ?>"></script>
-        <script src="<?= base_url('assets/plugins/sweetalert-master/dist/sweetalert.min.js') ?>"></script>
-        <script type="text/template" id="row-template">
-            <div class="row custom-row" data-id="<%= id %>">
-                <div class="inline-25 picture-tourist" style="background-image: url(<%= picture %>)"></div>
-                <div class="inline-75">
-                    <h3><%= name %></h3>
-                    <p><%= description %></p>
-                </div>
+    <script src="<?= base_url('assets/js/plugins/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/underscore-min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/loadingoverlay.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/loadingoverlay_progress.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/plugins/jquery.form.min.js') ?>"></script>
+    <script src="<?= base_url('assets/plugins/sweetalert-master/dist/sweetalert.min.js') ?>"></script>
+    <script type="text/template" id="row-template">
+        <div class="row custom-row" data-id="<%= id %>">
+            <div class="inline-25 picture-tourist" style="background-image: url(<%= picture %>)"></div>
+            <div class="inline-75">
+                <h3><%= name %></h3>
+                <p><%= description %></p>
             </div>
-        </script>
-        <script src="<?= base_url('assets/js/home.js') ?>"></script>
+        </div>
+    </script>
+    <script src="<?= base_url('assets/js/home.js') ?>"></script>
     </body>
 </html>
